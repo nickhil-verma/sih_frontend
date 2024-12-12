@@ -1,0 +1,95 @@
+ 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ 
+
+body {
+  @apply font-geist;
+}
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+ /* Add this to your main CSS file */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+/* Add this to YourStyles.css */
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1; /* Ensure it's behind other elements */
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5; /* Adjust opacity for subtle effect */
+}
+
+.circle-1 { width: 150px; height: 150px; background: radial-gradient(circle, rgba(0,204,204,0.7), rgba(0,128,128,0.3)); top: -30px; left: -50px; }
+.circle-2 { width: 200px; height: 200px; background: radial-gradient(circle, rgba(0,204,204,0.7), rgba(0,128,128,0.3)); top: -100px; right: -60px; }
+.circle-3 { width: 180px; height: 180px; background: radial-gradient(circle, rgba(0,204,204,0.7), rgba(0,128,128,0.3)); bottom: -80px; left: -100px; }
+.circle-4 { width: 220px; height: 220px; background: radial-gradient(circle, rgba(0,204,204,0.7), rgba(0,128,128,0.3)); bottom: -50px; right: -80px; }
+
+/* Add more circles */
+.circle-5 { width: 130px; height: 130px; background: radial-gradient(circle, rgba(0,204,204,0.7), rgba(0,128,128,0.3)); top: -150px; left: -20px; }
+.circle-6 { width: 170px; height: 170px; background: radial-gradient(circle, rgba(0,204,204,0.7), rgba(0,128,128,0.3)); bottom: -100px; right: -30px; }
+
+/* Dot Pattern */
+.dot-pattern {
+    position: absolute;
+    background-image: radial-gradient(circle at center center, teal-200 10%, transparent 10%);
+    background-size: 20px 20px;
+    opacity: .1;
+    top: -20%;
+    left: -20%;
+    right: -20%;
+    bottom: -20%;
+}
+
+.dotted-pattern {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 20%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.1) 80%);
+  background-size: 20px 20px;
+}
+
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  margin:15px auto;
+  position: relative;
+  background: #FFF;
+  box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+  box-sizing: border-box;
+  animation: shadowPulse 2s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: #FFF;
+    box-shadow: -24px 0 #15ff00, 24px 0 #FFF;
+  }
+  66% {
+    background: #15ff00;
+    box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+  }
+  100% {
+    background: #FFF;
+    box-shadow: -24px 0 #FFF, 24px 0 #15ff00;
+  }
+}
+
